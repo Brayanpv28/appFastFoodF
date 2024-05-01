@@ -33,14 +33,6 @@
         android:layout_y="141dp"
         android:src="@drawable/hamburguesa" />
 
-    <Button
-        android:id="@+id/agregarburger"
-        android:layout_width="108dp"
-        android:layout_height="37dp"
-        android:layout_x="297dp"
-        android:layout_y="177dp"
-        android:text="Agregar" />
-
     <ImageButton
         android:id="@+id/hotdogButton"
         android:layout_width="match_parent"
@@ -49,14 +41,6 @@
         android:layout_y="226dp"
         android:src="@drawable/hotdog" />
 
-    <Button
-        android:id="@+id/agregarhotdog"
-        android:layout_width="108dp"
-        android:layout_height="37dp"
-        android:layout_x="297dp"
-        android:layout_y="261dp"
-        android:text="Agregar" />
-
     <ImageButton
         android:id="@+id/potatosButton"
         android:layout_width="match_parent"
@@ -64,14 +48,6 @@
         android:layout_x="-2dp"
         android:layout_y="309dp"
         android:src="@drawable/frieds" />
-
-    <Button
-        android:id="@+id/agregarpotatoes"
-        android:layout_width="108dp"
-        android:layout_height="37dp"
-        android:layout_x="297dp"
-        android:layout_y="261dp"
-        android:text="Agregar" />
 
 
 </AbsoluteLayout>
