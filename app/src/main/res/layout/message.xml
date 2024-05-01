@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/viewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+                android:background="@color/md_grey_300"/>
+
+    <TextView
+        android:id="@+id/mensajedeexito"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_x="1dp"
+        android:layout_y="148dp"
+        android:text="Pedido tomado con exito"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/continuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="530dp"
+        android:text="Seguir comprando"
+        android:background="@drawable/bordebuttons"/>
+
+    <Button
+        android:id="@+id/terminarsalir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="580dp"
+        android:text="Finalizar compra y salir"
+        android:background="@drawable/bordebuttons"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="198dp"
+        android:layout_height="138dp"
+        android:layout_x="107dp"
+        android:layout_y="195dp"
+        android:src="@drawable/correctoazul" />
+</AbsoluteLayout>

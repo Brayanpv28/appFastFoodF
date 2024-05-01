@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="602dp"
+        android:layout_x="0dp"
+        android:layout_y="55dp">
+
+    </View>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_x="0dp"
+        android:layout_y="8dp"
+        android:background="@drawable/bordestitles"
+        android:text="Nombre del local"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <ImageButton
+        android:id="@+id/burgerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="2dp"
+        android:layout_y="141dp"
+        android:src="@drawable/hamburguesa" />
+
+    <ImageButton
+        android:id="@+id/hotdogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="1dp"
+        android:layout_y="226dp"
+        android:src="@drawable/hotdog" />
+
+    <ImageButton
+        android:id="@+id/potatosButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="-2dp"
+        android:layout_y="309dp"
+        android:src="@drawable/frieds" />
+
+    <ImageButton
+        android:id="@+id/drinksButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="393dp" />
+
+
+</AbsoluteLayout>
