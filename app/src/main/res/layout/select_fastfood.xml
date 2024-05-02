@@ -20,6 +20,7 @@
         android:layout_x="8dp"
         android:layout_y="17dp"
         android:text="Nombre del Local"
+        android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25dp" />
@@ -86,7 +87,7 @@
         android:layout_x="107dp"
         android:layout_y="326dp"
         android:text="HAMBURGUESA"
-        android:fontFamily="casual"
+        android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25dp" />
@@ -98,6 +99,7 @@
         android:layout_x="156dp"
         android:layout_y="406dp"
         android:text="PERRO"
+        android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25dp" />
@@ -109,6 +111,7 @@
         android:layout_x="126dp"
         android:layout_y="486dp"
         android:text="SALCHIPAPAS"
+        android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25dp" />
@@ -120,6 +123,7 @@
         android:layout_x="144dp"
         android:layout_y="566dp"
         android:text="BEBIDAS"
+        android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25dp" />
