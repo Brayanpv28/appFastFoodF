@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/imagePerrito"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/simplehotdog" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tituloPerrito"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Perrito"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textPerrito"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:fontFamily="@font/brandinksans"
+                android:text="Pan, salchicha, papa triturada y ensalada"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/PrecioPerrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $9.000"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/AgregarPerrito"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/imagePerro"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/specialhotdog" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tituloPerro"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Perro"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textPerro"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:fontFamily="@font/brandinksans"
+                android:text="Pan, salchicha, papa trirurada, ensalda y queso"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/PrecioPerro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $10.500"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/AgregarPerro"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background">
+
+        <ImageView
+            android:id="@+id/imagePerroEspecial"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/superhotdog" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tituloPerroEspecial"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Perro especial"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textPerroEspecial"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:fontFamily="@font/brandinksans"
+                android:text="Pan, salchicha, papa trirurada, ensalda, tocineta y queso"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/PrecioPerroEspecial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $13.000"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/AgregarPerroEspecial"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

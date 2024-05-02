@@ -15,6 +15,6 @@ import com.example.appfastfood.ui.theme.AppFastFoodTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.message)
+        setContentView(R.layout.burger)
     }
 }
