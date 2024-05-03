@@ -15,7 +15,7 @@
 
     <TextView
         android:id="@+id/localNane"
-        android:layout_width="396dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
