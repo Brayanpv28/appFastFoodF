@@ -11,13 +11,20 @@
         android:id="@+id/pagBurger"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:text="Hamburguesas"
         android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="38dp" />
+
+    <ImageButton
+        android:id="@+id/backHB"
+        android:layout_width="41dp"
+        android:layout_height="48dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="-45dp"
+        android:background="@drawable/buttonback"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"

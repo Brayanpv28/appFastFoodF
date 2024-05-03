@@ -6,4 +6,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".BebidaInterfaz">
 
+    <TextView
+        android:id="@+id/localNane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Bebidas"
+        android:fontFamily="@font/bondstory"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="38dp" />
+
+    <ImageButton
+        android:id="@+id/backBb"
+        android:layout_width="41dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/buttonback"
+        android:src="@drawable/back" />
+
 </RelativeLayout>
