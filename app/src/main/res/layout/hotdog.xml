@@ -22,7 +22,7 @@
         android:layout_width="41dp"
         android:layout_height="48dp"
         android:src="@drawable/back"
-        android:layout_marginTop="-45dp"
+        android:layout_marginTop="-40dp"
         android:background="@drawable/buttonback"/>
 
     <LinearLayout
