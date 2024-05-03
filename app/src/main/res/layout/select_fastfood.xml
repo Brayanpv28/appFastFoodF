@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="602dp"
-        android:layout_x="1dp"
-        android:layout_y="60dp">
+        android:layout_marginTop="40dp">
 
     </View>
 
@@ -17,33 +15,40 @@
         android:id="@+id/localNane"
         android:layout_width="396dp"
         android:layout_height="wrap_content"
-        android:layout_x="8dp"
-        android:layout_y="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:text="Nombre del Local"
         android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="25dp" />
+        android:textSize="38dp" />
+
+    <ImageView
+        android:id="@+id/logoLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="142dp"
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/mensajeHacer"
         android:layout_width="396dp"
         android:layout_height="27dp"
-        android:layout_x="7dp"
-        android:layout_y="264dp"
         android:text="Selecciona que quieres pedir hoy"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="16dp" />
+        android:layout_marginTop="220dp"
+        android:textSize="16sp" />
 
     <ImageButton
         android:id="@+id/burgerButton"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:layout_x="13dp"
-        android:layout_y="306dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/bordesviewbuttons"
         android:paddingLeft="16dp"
+        android:layout_marginTop="275dp"
         android:scaleType="fitStart"
         android:src="@drawable/hamburguesa" />
 
@@ -51,30 +56,33 @@
         android:id="@+id/hotdogButton"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:layout_x="13dp"
-        android:layout_y="386dp"
-        android:src="@drawable/hotdog"
-        android:scaleType="fitStart"
+        android:layout_below="@id/burgerButton"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bordesviewbuttons"
         android:paddingLeft="16dp"
-        android:background="@drawable/bordesviewbuttons"/>
+        android:scaleType="fitStart"
+        android:src="@drawable/hotdog" />
 
     <ImageButton
         android:id="@+id/potatosButton"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:layout_x="13dp"
-        android:layout_y="466dp"
-        android:src="@drawable/frieds"
-        android:scaleType="fitStart"
+        android:layout_below="@id/hotdogButton"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bordesviewbuttons"
         android:paddingLeft="25dp"
-        android:background="@drawable/bordesviewbuttons"/>
+        android:scaleType="fitStart"
+        android:src="@drawable/frieds" />
 
     <ImageButton
         android:id="@+id/drinksButton"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:layout_x="13dp"
-        android:layout_y="546dp"
+        android:layout_below="@id/potatosButton"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/bordesviewbuttons"
         android:paddingLeft="18dp"
         android:scaleType="fitStart"
@@ -84,57 +92,53 @@
         android:id="@+id/productoBurger"
         android:layout_width="239dp"
         android:layout_height="37dp"
-        android:layout_x="107dp"
-        android:layout_y="326dp"
-        android:text="HAMBURGUESA"
+        android:layout_below="@id/burgerButton"
+        android:layout_marginTop="-48dp"
+        android:layout_marginStart="112dp"
         android:fontFamily="@font/bondstory"
+        android:text="HAMBURGUESA"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/productoHotDog"
         android:layout_width="115dp"
         android:layout_height="37dp"
-        android:layout_x="156dp"
-        android:layout_y="406dp"
+        android:layout_below="@id/hotdogButton"
+        android:layout_marginTop="-48dp"
+        android:layout_marginStart="165dp"
         android:text="PERRO"
         android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/productoSalchipapas"
         android:layout_width="194dp"
         android:layout_height="37dp"
-        android:layout_x="126dp"
-        android:layout_y="486dp"
+        android:layout_below="@id/potatosButton"
+        android:layout_marginTop="-48dp"
+        android:layout_marginStart="135dp"
         android:text="SALCHIPAPAS"
         android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/productoBebidas"
         android:layout_width="155dp"
         android:layout_height="37dp"
-        android:layout_x="144dp"
-        android:layout_y="566dp"
-        android:text="BEBIDAS"
+        android:layout_below="@id/drinksButton"
+        android:layout_marginTop="-48dp"
+        android:layout_marginStart="145dp"
         android:fontFamily="@font/bondstory"
+        android:text="BEBIDAS"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="25dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="138dp"
-        android:layout_y="102dp"
-        android:src="@drawable/logo" />
+        android:textSize="25sp" />
 
 
-</AbsoluteLayout>
+</RelativeLayout>
