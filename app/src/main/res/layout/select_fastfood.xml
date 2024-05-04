@@ -9,7 +9,9 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="602dp"
-        android:layout_marginTop="40dp">
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="17dp">
 
     </View>
 
@@ -142,5 +144,28 @@
         android:textColor="@color/black"
         android:textSize="25sp" />
 
+    <ImageView
+        android:id="@+id/imgCarrito"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/carritocompras"
+        android:layout_marginTop="680dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bordescarrito"
+        android:paddingLeft="18dp"
+        android:scaleType="fitStart"/>
+
+    <TextView
+        android:id="@+id/txtCarrito"
+        android:layout_width="155dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/imgCarrito"
+        android:layout_marginTop="-48dp"
+        android:layout_marginStart="145dp"
+        android:fontFamily="@font/bondstory"
+        android:text="$"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
 
 </RelativeLayout>
