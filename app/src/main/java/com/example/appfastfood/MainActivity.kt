@@ -35,5 +35,11 @@ class MainActivity : ComponentActivity() {
             val intent: Intent = Intent(this, BebidaInterfaz::class.java)
             startActivity(intent)
         }
+
+        val buttonCarC: ImageButton = findViewById(R.id.carritoButton)
+        buttonCarC.setOnClickListener {
+            val intent: Intent = Intent(this, carritoInterfaz::class.java)
+            startActivity(intent)
+        }
     }
 }

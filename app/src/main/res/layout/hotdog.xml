@@ -221,8 +221,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imgCarrito"
+        <ImageButton
+            android:id="@+id/carritoCButton"
             android:layout_width="378dp"
             android:layout_height="wrap_content"
             android:src="@drawable/carritocompras"
@@ -236,7 +236,7 @@
             android:id="@+id/txtCarrito"
             android:layout_width="155dp"
             android:layout_height="37dp"
-            android:layout_below="@id/imgCarrito"
+            android:layout_below="@id/carritoCButton"
             android:layout_marginTop="-48dp"
             android:layout_marginStart="145dp"
             android:fontFamily="@font/bondstory"
