@@ -16,7 +16,7 @@
     </View>
 
     <TextView
-        android:id="@+id/productosComida"
+        android:id="@+id/tltCarrito"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -35,5 +35,35 @@
         android:layout_marginStart="12dp"
         android:background="@drawable/buttonback"
         android:src="@drawable/back" />
+
+    <ListView
+        android:id="@+id/listaProductos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backCarrito" />
+
+    <ImageButton
+        android:id="@+id/pagoButton"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pagar"
+        android:layout_marginTop="680dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bordescarrito"
+        android:paddingLeft="18dp"
+        android:scaleType="fitStart"/>
+
+    <TextView
+        android:id="@+id/txtPagar"
+        android:layout_width="155dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/pagoButton"
+        android:layout_marginTop="-48dp"
+        android:layout_marginStart="145dp"
+        android:fontFamily="@font/bondstory"
+        android:text="Pagar"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
 
 </RelativeLayout>
