@@ -1,7 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PagoInterfaz">
 
-</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="602dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="17dp">
+
+    </View>
+
+    <TextView
+        android:id="@+id/tltPago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Pago"
+        android:fontFamily="@font/bondstory"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="38dp" />
+
+    <ImageButton
+        android:id="@+id/backPago"
+        android:layout_width="41dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/buttonback"
+        android:src="@drawable/back" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/bordespago"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/txtApellido"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="200dp"
+        android:background="@drawable/bordespago"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <ImageButton
+        android:id="@+id/pagoyButton"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pagar"
+        android:layout_marginTop="680dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bordescarrito"
+        android:paddingLeft="18dp"
+        android:scaleType="fitStart"/>
+
+    <TextView
+        android:id="@+id/txtPagary"
+        android:layout_width="155dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/pagoyButton"
+        android:layout_marginTop="-48dp"
+        android:layout_marginStart="145dp"
+        android:fontFamily="@font/bondstory"
+        android:text="Realizar Pago"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+</RelativeLayout>

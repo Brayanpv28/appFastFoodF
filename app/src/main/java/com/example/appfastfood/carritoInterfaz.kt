@@ -16,5 +16,11 @@ class carritoInterfaz : ComponentActivity() {
             startActivity(intent)
             finish()
         }
+
+        val buttonPagoC: ImageButton = findViewById(R.id.pagoButton)
+        buttonPagoC.setOnClickListener {
+            val intent: Intent = Intent(this, PagoInterfaz::class.java)
+            startActivity(intent)
+        }
     }
 }
