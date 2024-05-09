@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensiones para teléfonos pequeños -->
+    <dimen name="margen_lateral">16dp</dimen>
+    <dimen name="texto_grande">24sp</dimen>
+
+    <!-- Dimensiones para teléfonos grandes o tabletas -->
+    <dimen name="margen_lateral_large">32dp</dimen>
+    <dimen name="texto_grande_large">32sp</dimen>
+</resources>
