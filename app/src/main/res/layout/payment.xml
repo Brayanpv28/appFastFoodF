@@ -160,7 +160,7 @@
         android:layout_marginStart="10dp"
         android:textSize="18dp"/>
 
-    <TextView
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="428dp"
@@ -180,7 +180,7 @@
         android:layout_marginStart="10dp"
         android:textSize="18dp"/>
 
-    <TextView
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="488dp"
@@ -189,6 +189,25 @@
         android:background="@drawable/bordespago"
         android:entries="@array/pago"
         android:hint="Selecciona una opcion de pago"/>
+
+    <TextView
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:text="Valor a pagar"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:layout_marginStart="10dp"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/txtValorTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="548dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bordepreciototal"/>
 
     <ImageButton
         android:id="@+id/pagoyButton"
