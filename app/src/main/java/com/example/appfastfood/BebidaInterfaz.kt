@@ -16,7 +16,7 @@ class BebidaInterfaz : ComponentActivity() {
             onBackPressed()
         }
 
-        val buttonCarC: ImageButton = findViewById(R.id.carritoButton)
+        val buttonCarC: ImageButton = findViewById(R.id.carritoCButton)
         buttonCarC.setOnClickListener {
             val intent: Intent = Intent(this, carritoInterfaz::class.java)
             startActivity(intent)

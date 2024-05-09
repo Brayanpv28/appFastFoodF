@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
     tools:context=".BebidaInterfaz">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/localNane"
@@ -22,37 +27,722 @@
         android:id="@+id/backBb"
         android:layout_width="41dp"
         android:layout_height="48dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginStart="12dp"
-        android:background="@drawable/buttonback"
-        android:src="@drawable/back" />
+        android:src="@drawable/back"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/buttonback"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/imagenjugomango"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/jugomango" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tituloJugosmango"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Jugo de mango"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
 
 
+            <TextView
+                android:id="@+id/PrecioJugomango"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $4.000"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/AgregarJugomango"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:id="@+id/imagenjugomora"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/jugomora" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/tituloJugosmora"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Jugo de mora"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bondstory"
+                    android:textStyle="bold"/>
 
 
+                <TextView
+                    android:id="@+id/PrecioJugomora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandinksans"
+                    android:text="   $4.000"
+                    android:textColor="@color/md_red_A400"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-    <ImageButton
-        android:id="@+id/carritoButton"
-        android:layout_width="378dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/carritocompras"
-        android:layout_marginTop="680dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/bordescarrito"
-        android:paddingLeft="18dp"
-        android:scaleType="fitStart"/>
+                <Button
+                    android:id="@+id/AgregarJugomora"
+                    android:layout_width="99dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordebuttons"
+                    android:fontFamily="@font/bondstory"
+                    android:text="Agregar" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtCarrito"
-        android:layout_width="155dp"
-        android:layout_height="37dp"
-        android:layout_below="@id/carritoButton"
-        android:layout_marginTop="-48dp"
-        android:layout_marginStart="145dp"
-        android:fontFamily="@font/bondstory"
-        android:text="$"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25sp" />
+        </LinearLayout>
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:id="@+id/imagenjugomaracuya"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/jugomaracuya" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/tituloJugosmaracuya"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Jugo de maracuyá"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bondstory"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/PrecioJugomaracuya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandinksans"
+                    android:text="   $4.000"
+                    android:textColor="@color/md_red_A400"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/AgregarJugomaracuya"
+                    android:layout_width="99dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordebuttons"
+                    android:fontFamily="@font/bondstory"
+                    android:text="Agregar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:id="@+id/imagenjugolulo"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/jugolulo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/tituloJugolulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Jugo de lulo"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bondstory"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/PrecioJugolulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandinksans"
+                    android:text="   $4.000"
+                    android:textColor="@color/md_red_A400"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/AgregarJugolulo"
+                    android:layout_width="99dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordebuttons"
+                    android:fontFamily="@font/bondstory"
+                    android:text="Agregar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/imageCocacolaPq"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/cocacolapq" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/titulococacolapq"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Cocacola Personal"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Preciococacolapq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $3.500"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Agregarcocacolapq"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/imagemanzanapq"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/manzanapq" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/titulomanzanapq"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Manzana personal"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Preciomanzanapq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $3.500"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Agregarmanzanapq"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/imageuvapq"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/uvapq" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/titulouvapq"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Uva personal"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/Preciouvapq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $3.500"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Agregaruvapq"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:id="@+id/imagencolombianapq"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/colombianapq" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/titulocolombianapq"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Colombiana personal"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bondstory"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/Preciocolombianapq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandinksans"
+                    android:text="   $3.500"
+                    android:textColor="@color/md_red_A400"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/Agregarcolombianapq"
+                    android:layout_width="99dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordebuttons"
+                    android:fontFamily="@font/bondstory"
+                    android:text="Agregar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:id="@+id/imagencocacolagr"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/cocacolagr" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/titulococacolagr"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Cocacola 1.5L"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bondstory"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/Preciococacolagr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandinksans"
+                    android:text="   $6.500"
+                    android:textColor="@color/md_red_A400"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/Agregarcocacolagr"
+                    android:layout_width="99dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordebuttons"
+                    android:fontFamily="@font/bondstory"
+                    android:text="Agregar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:id="@+id/imagemanzanagr"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/manzanagr" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/titulomanzanagr"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Manzana 1.5L"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bondstory"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/Preciomanzanagr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandinksans"
+                    android:text="   $6.500"
+                    android:textColor="@color/md_red_A400"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/Agregarmanzanagr"
+                    android:layout_width="99dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordebuttons"
+                    android:fontFamily="@font/bondstory"
+                    android:text="Agregar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:id="@+id/imagenuvagr"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/uvagr" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/titulouvagr"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Uva 1.5L"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bondstory"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/Preciouvagr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandinksans"
+                    android:text="   $6.500"
+                    android:textColor="@color/md_red_A400"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/Agregaruvagr"
+                    android:layout_width="99dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordebuttons"
+                    android:fontFamily="@font/bondstory"
+                    android:text="Agregar" />
+            </LinearLayout>
+
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp">
+
+            <ImageView
+                android:id="@+id/imagencolombiangr"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/colombianagr" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/titulocolombiangr"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Colombiana 1.5L"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/bondstory"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/Preciocolombianagr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandinksans"
+                    android:text="   $6.500"
+                    android:textColor="@color/md_red_A400"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/Agregarcolombianagr"
+                    android:layout_width="99dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bordebuttons"
+                    android:fontFamily="@font/bondstory"
+                    android:text="Agregar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/carritoCButton"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/carritocompras"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bordescarrito"
+            android:paddingLeft="18dp"
+            android:scaleType="fitStart"/>
+
+        <TextView
+            android:id="@+id/txtCarrito"
+            android:layout_width="155dp"
+            android:layout_height="37dp"
+            android:layout_below="@id/carritoCButton"
+            android:layout_marginTop="-48dp"
+            android:layout_marginStart="145dp"
+            android:fontFamily="@font/bondstory"
+            android:text="$"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
