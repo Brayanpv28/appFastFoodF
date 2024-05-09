@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
     tools:context=".SalchipapaInterfaz">
 
     <TextView
@@ -22,38 +23,230 @@
         android:id="@+id/backSP"
         android:layout_width="41dp"
         android:layout_height="48dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginStart="12dp"
-        android:background="@drawable/buttonback"
-        android:src="@drawable/back" />
+        android:src="@drawable/back"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/buttonback"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp">
 
+        <ImageView
+            android:id="@+id/imageSalchiSencilla"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/simplesalchipapa" />
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
 
+            <TextView
+                android:id="@+id/tituloSalchiSencilla"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Salchipapa Sencilla"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
 
-    <ImageButton
-        android:id="@+id/carritoButton"
-        android:layout_width="378dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/carritocompras"
-        android:layout_marginTop="680dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/bordescarrito"
-        android:paddingLeft="18dp"
-        android:scaleType="fitStart"/>
+            <TextView
+                android:id="@+id/textSalchiSencilla"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:fontFamily="@font/brandinksans"
+                android:text="Papas, salchichas y salsas al gusto"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtCarrito"
-        android:layout_width="155dp"
-        android:layout_height="37dp"
-        android:layout_below="@id/carritoButton"
-        android:layout_marginTop="-48dp"
-        android:layout_marginStart="145dp"
-        android:fontFamily="@font/bondstory"
-        android:text="$"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25sp" />
+            <TextView
+                android:id="@+id/PrecioSalchiSencilla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $10.000"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/AgregarSalchiSencilla"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
 
-</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/imageEspecialSalchi"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/specialsalchipapa" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tituloEspecialSalchi"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Salchipapa Especial"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textEspecialSalchi"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:fontFamily="@font/brandinksans"
+                android:text="Papas, salchichas, queso y salsas al gusto"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/PrecioEspecialSalchi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $12.000"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/AgregarEspecialSalchi"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_background">
+
+        <ImageView
+            android:id="@+id/imagenSuperSalchi"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/supersalchipapa" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tituloSuperSalchi"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:text="Salchipapas super"
+                android:textSize="22sp"
+                android:fontFamily="@font/bondstory"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textSuperSalchi"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:fontFamily="@font/brandinksans"
+                android:text="Papas, salchichas, queso, maicitos y salsa al gusto"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/PrecioSuperSalchi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brandinksans"
+                android:text="   $14.500"
+                android:textColor="@color/md_red_A400"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/AgregarSuperSalchi"
+                android:layout_width="99dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bordebuttons"
+                android:fontFamily="@font/bondstory"
+                android:text="Agregar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/carritoButton"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/carritocompras"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bordescarrito"
+            android:paddingLeft="18dp"
+            android:scaleType="fitStart"/>
+
+        <TextView
+            android:id="@+id/txtCarrito"
+            android:layout_width="155dp"
+            android:layout_height="37dp"
+            android:layout_below="@id/carritoButton"
+            android:layout_marginTop="-48dp"
+            android:layout_marginStart="145dp"
+            android:fontFamily="@font/bondstory"
+            android:text="$"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
