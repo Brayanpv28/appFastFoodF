@@ -111,12 +111,12 @@
     <TextView
         android:layout_width="390dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="280dp"
         android:text="Direccion"
-        android:textColor="@color/black"
         android:textAlignment="textStart"
-        android:layout_marginStart="10dp"
-        android:textSize="18dp"/>
+        android:textColor="@color/black"
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/txtDireccion"
@@ -166,6 +166,7 @@
         android:layout_marginTop="428dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:spinnerMode="dropdown"
         android:background="@drawable/bordespago"
         android:entries="@array/opciones"
         android:hint="Selecciona una opcion"/>
@@ -207,7 +208,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="548dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/bordepreciototal"/>
+        android:textSize="23dp"
+        android:textAlignment="center"
+        android:background="@drawable/bordesviewbuttons"/>
 
     <ImageButton
         android:id="@+id/pagoyButton"
