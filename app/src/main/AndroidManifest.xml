@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppFastFood"
         tools:targetApi="31">
         <activity
+            android:name=".messageIU"
+            android:exported="true"/>
+        <activity
             android:name=".PagoInterfaz"
             android:exported="true"/>
         <activity

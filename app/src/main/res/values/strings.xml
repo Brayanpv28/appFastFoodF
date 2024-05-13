@@ -8,5 +8,7 @@
     <string-array name="pago">
         <item>Efectivo</item>
         <item>Transferencia</item>
+        <item>Tarjeta</item>
     </string-array>
+    <string name="SelecFormaPago">Selecciona una forma de pago</string>
 </resources>
