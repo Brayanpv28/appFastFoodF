@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">appFastFood</string>
     <string-array name="opciones">
+        <item>Seleccione una opcion de vivienda</item>
         <item>Casa</item>
         <item>Departamento</item>
     </string-array>
 
     <string-array name="pago">
+        <item>Selecciona una forma de pago</item>
         <item>Efectivo</item>
         <item>Transferencia</item>
         <item>Tarjeta</item>
