@@ -25,10 +25,10 @@
     <TextView
         android:id="@+id/mensajedeexito"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="199dp"
         android:layout_x="1dp"
         android:layout_y="148dp"
-        android:text="Pedido tomado con exito"
+        android:text="Muchas gracias por tu compra Pedido tomado con exito"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp" />
@@ -56,6 +56,6 @@
         android:layout_width="198dp"
         android:layout_height="138dp"
         android:layout_x="107dp"
-        android:layout_y="195dp"
-        android:src="@drawable/comprobado" />
+        android:layout_y="204dp"
+        android:src="@drawable/verificacion" />
 </AbsoluteLayout>

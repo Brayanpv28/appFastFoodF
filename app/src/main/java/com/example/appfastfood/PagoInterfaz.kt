@@ -10,6 +10,9 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class PagoInterfaz : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,5 +84,21 @@ class PagoInterfaz : ComponentActivity() {
                 sformaPago.setSelection(-1)
             }
         }
+
+        val fechayHoraEditText: EditText = findViewById(R.id.FechayHora)
+
+        // Obtener la fecha y hora actuales
+        val currentDateTime = Date()
+
+        // Formatear la fecha y hora
+        val formatter = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
+        val formatted = formatter.format(currentDateTime)
+
+        // Mostrar la fecha y hora en el EditText
+        fechayHoraEditText.setText(formatted)
+
+        // Hacer que el EditText sea de solo lectura
+        fechayHoraEditText.isFocusable = false
+        fechayHoraEditText.isClickable = false
     }
 }

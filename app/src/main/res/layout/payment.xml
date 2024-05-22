@@ -106,7 +106,9 @@
         android:layout_marginEnd="10dp"
         android:ems="10"
         android:background="@drawable/bordespago"
-        android:inputType="datetime"/>
+        android:editable="false"
+        android:focusable="false"
+        android:inputType="none"/>
 
     <TextView
         android:layout_width="390dp"
