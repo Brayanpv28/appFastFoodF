@@ -1,9 +1,11 @@
 package com.example.appfastfood
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -13,6 +15,13 @@ class PagoInterfaz : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.payment)
+
+        val buttonBackM = findViewById<ImageButton>(R.id.backPago)
+        buttonBackM.setOnClickListener {
+            val intent: Intent = Intent(this, carritoInterfaz::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val sformaPago: Spinner = findViewById(R.id.sformaPago)
         val titleDevuPago: TextView = findViewById(R.id.titleDevuelta)
