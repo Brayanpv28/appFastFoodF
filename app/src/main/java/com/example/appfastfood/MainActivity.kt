@@ -3,14 +3,18 @@ package com.example.appfastfood
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
-import androidx.activity.ComponentActivity
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity(), CarritoObserver {
 
+    private lateinit var txtCarrito: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.select_fastfood)
+
+        txtCarrito = findViewById(R.id.txtCarrito)
 
         val buttonBurger: ImageButton = findViewById(R.id.burgerButton)
         buttonBurger.setOnClickListener {
@@ -40,5 +44,21 @@ class MainActivity : ComponentActivity() {
             val intent: Intent = Intent(this, carritoInterfaz::class.java)
             startActivity(intent)
         }
+
+        CarritoManager.agregarObservador(this)
+        actualizarTotalCarrito()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        CarritoManager.removerObservador(this)
+    }
+
+    override fun onCarritoActualizado(total: Int) {
+        txtCarrito.text = "Total: $total"
+    }
+
+    private fun actualizarTotalCarrito() {
+        txtCarrito.text = "Total: ${CarritoManager.obtenerTotalCarrito()}"
     }
 }
