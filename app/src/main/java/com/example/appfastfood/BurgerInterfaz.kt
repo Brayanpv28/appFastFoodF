@@ -6,12 +6,10 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.ComponentActivity
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+
 
 class BurgerInterfaz : ComponentActivity() {
 
-    private val db = Firebase.firestore
     private var totalCarrito: Int = 0
     private lateinit var txtCarrito: TextView
 
