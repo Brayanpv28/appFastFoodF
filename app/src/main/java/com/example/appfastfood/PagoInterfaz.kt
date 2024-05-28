@@ -1,5 +1,4 @@
 package com.example.appfastfood
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -25,7 +24,6 @@ class PagoInterfaz : ComponentActivity() {
             startActivity(intent)
             finish()
         }
-
         val sformaPago: Spinner = findViewById(R.id.sformaPago)
         val titleDevuPago: TextView = findViewById(R.id.titleDevuelta)
         val txtValorD: EditText = findViewById(R.id.txtValorD)
@@ -42,11 +40,9 @@ class PagoInterfaz : ComponentActivity() {
                 id: Long
             ) {
                 val formaPagoSeleccionada = parent?.getItemAtPosition(position).toString()
-
                 if (formaPagoSeleccionada == "Efectivo") {
                     titleDevuPago.visibility = View.VISIBLE
                     txtValorD.visibility = View.VISIBLE
-
                     titleNumT.visibility = View.GONE
                     numTarjeta.visibility = View.GONE
                     txtCVC.visibility = View.GONE
@@ -58,7 +54,7 @@ class PagoInterfaz : ComponentActivity() {
                     numTarjeta.visibility = View.VISIBLE
                     txtCVC.visibility = View.VISIBLE
                     fechaVenT.visibility = View.VISIBLE
-                }else if(formaPagoSeleccionada == "Seleccione una forma de pago") {
+                } else if (formaPagoSeleccionada == "Seleccione una forma de pago") {
                     Toast.makeText(
                         applicationContext,
                         "Por favor, seleccione una forma de pago",
@@ -67,7 +63,6 @@ class PagoInterfaz : ComponentActivity() {
                 } else {
                     titleDevuPago.visibility = View.GONE
                     txtValorD.visibility = View.GONE
-
                     titleNumT.visibility = View.GONE
                     numTarjeta.visibility = View.GONE
                     txtCVC.visibility = View.GONE
@@ -87,18 +82,21 @@ class PagoInterfaz : ComponentActivity() {
 
         val fechayHoraEditText: EditText = findViewById(R.id.FechayHora)
 
-        // Obtener la fecha y hora actuales
         val currentDateTime = Date()
 
-        // Formatear la fecha y hora
         val formatter = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
         val formatted = formatter.format(currentDateTime)
 
-        // Mostrar la fecha y hora en el EditText
         fechayHoraEditText.setText(formatted)
 
-        // Hacer que el EditText sea de solo lectura
         fechayHoraEditText.isFocusable = false
         fechayHoraEditText.isClickable = false
+
+        val realizarPago = findViewById<ImageButton>(R.id.pagoyButton)
+        realizarPago.setOnClickListener {
+            val intent: Intent = Intent(this, messageIU::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

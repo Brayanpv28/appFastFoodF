@@ -4,9 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
 
-class MainActivity : AppCompatActivity(), CarritoObserver {
+class MainActivity : ComponentActivity() {
 
     private lateinit var txtCarrito: TextView
 
@@ -45,20 +45,5 @@ class MainActivity : AppCompatActivity(), CarritoObserver {
             startActivity(intent)
         }
 
-        CarritoManager.agregarObservador(this)
-        actualizarTotalCarrito()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        CarritoManager.removerObservador(this)
-    }
-
-    override fun onCarritoActualizado(total: Int) {
-        txtCarrito.text = "Total: $total"
-    }
-
-    private fun actualizarTotalCarrito() {
-        txtCarrito.text = "Total: ${CarritoManager.obtenerTotalCarrito()}"
     }
 }

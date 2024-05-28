@@ -8,15 +8,15 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 
 
-class SalchipapaInterfaz : ComponentActivity(), CarritoObserver {
+class SalchipapaInterfaz : ComponentActivity() {
 
     private val db = Firebase.firestore
     private var totalCarrito: Int = 0
-    private lateinit var txtCarrito:TextView
+    private lateinit var txtCarrito: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.salchipapas)
@@ -50,6 +50,7 @@ class SalchipapaInterfaz : ComponentActivity(), CarritoObserver {
             startActivity(intent)
         }
     }
+
     private fun agregarSalchipapa(tipo: String) {
         Log.d("FirestoreDebug", "Intentando agregar salchipapa de tipo: $tipo")
         db.collection("comidas")
@@ -77,21 +78,6 @@ class SalchipapaInterfaz : ComponentActivity(), CarritoObserver {
                 Log.e("FirestoreError", "Error al obtener el documento: $exception")
                 Toast.makeText(this, "Error: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
-        CarritoManager.agregarObservador(this)
-        actualizarTotalCarrito()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        CarritoManager.removerObservador(this)
-    }
-
-    override fun onCarritoActualizado(total: Int) {
-        txtCarrito.text = "Total: $total"
-    }
-
-    private fun actualizarTotalCarrito() {
-        txtCarrito.text = "Total: ${CarritoManager.obtenerTotalCarrito()}"
-    }
 }
-

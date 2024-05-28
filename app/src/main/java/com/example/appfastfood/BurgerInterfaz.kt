@@ -11,7 +11,7 @@ import androidx.activity.ComponentActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class BurgerInterfaz : ComponentActivity(), CarritoObserver  {
+class BurgerInterfaz : ComponentActivity(){
 
     private val db = Firebase.firestore
     private var totalCarrito: Int = 0
@@ -78,20 +78,5 @@ class BurgerInterfaz : ComponentActivity(), CarritoObserver  {
                 Log.e("FirestoreError", "Error al obtener el documento: $exception")
                 Toast.makeText(this, "Error: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
-        CarritoManager.agregarObservador(this)
-        actualizarTotalCarrito()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        CarritoManager.removerObservador(this)
-    }
-
-    override fun onCarritoActualizado(total: Int) {
-        txtCarrito.text = "Total: $total"
-    }
-
-    private fun actualizarTotalCarrito() {
-        txtCarrito.text = "Total: ${CarritoManager.obtenerTotalCarrito()}"
     }
 }

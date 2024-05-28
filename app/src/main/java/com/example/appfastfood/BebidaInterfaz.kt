@@ -1,5 +1,6 @@
 package com.example.appfastfood
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +9,10 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 
-class BebidaInterfaz : ComponentActivity(), CarritoObserver {
-
+class BebidaInterfaz : ComponentActivity() {
     private val db = Firebase.firestore
     private var totalCarrito: Int = 0
     private lateinit var txtCarrito: TextView
@@ -94,6 +94,7 @@ class BebidaInterfaz : ComponentActivity(), CarritoObserver {
             startActivity(intent)
         }
     }
+
     private fun agregarBebida(tipo: String) {
         Log.d("FirestoreDebug", "Intentando agregar bebida de tipo: $tipo")
         db.collection("comidas")
@@ -121,23 +122,6 @@ class BebidaInterfaz : ComponentActivity(), CarritoObserver {
                 Log.e("FirestoreError", "Error al obtener el documento: $exception")
                 Toast.makeText(this, "Error: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
-        CarritoManager.agregarObservador(this)
-        actualizarTotalCarrito()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        CarritoManager.removerObservador(this)
-    }
-
-    override fun onCarritoActualizado(total: Int) {
-        txtCarrito.text = "Total: $total"
-    }
-
-    private fun actualizarTotalCarrito() {
-        txtCarrito.text = "Total: ${CarritoManager.obtenerTotalCarrito()}"
     }
 }
-
-
 
