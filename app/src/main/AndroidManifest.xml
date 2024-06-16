@@ -19,6 +19,9 @@
             android:name=".PagoInterfaz"
             android:exported="true"/>
         <activity
+            android:name=".carritoInterfaz"
+            android:exported="true"/>
+        <activity
             android:name=".BurgerInterfaz"
             android:exported="true"/>
         <activity
@@ -31,7 +34,13 @@
             android:name=".BebidaInterfaz"
             android:exported="true"/>
         <activity
-            android:name=".carritoInterfaz"
+            android:name=".SeleccionComida"
+            android:exported="true"/>
+        <activity
+            android:name=".InicioSesion"
+            android:exported="true"/>
+        <activity
+            android:name=".Registro"
             android:exported="true"/>
         <activity
             android:name=".MainActivity"
