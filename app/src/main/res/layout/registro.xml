@@ -6,5 +6,192 @@
     android:background="@drawable/fondo_difuminado"
     tools:context=".Registro">
 
+    <RelativeLayout
+        android:id="@+id/viewregistro"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:layout_marginStart="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/viewregistro">
+
+        <TextView
+            android:id="@+id/Registrarse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Registrarse"
+            android:fontFamily="@font/bondstory"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="35dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingresa los siguientes datos para completar tu registro"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="45dp"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/brandinksans"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:text="Ingresa tu nombre"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bondstory"
+            android:textAlignment="textStart"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/txtNombreRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="118dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/brandinksans"
+            android:background="@drawable/bordespago"
+            android:ems="10"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="Ingresa tu correo electronico"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bondstory"
+            android:textAlignment="textStart"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/CorreoUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="176dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/brandinksans"
+            android:background="@drawable/bordespago"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="208dp"
+            android:text="Ingresa una contraseña"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bondstory"
+            android:textAlignment="textStart"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/ContraseñaUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="234dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/brandinksans"
+            android:background="@drawable/bordespago"
+            android:ems="10"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="266dp"
+            android:text="Ingresa tu numero de celular"
+            android:fontFamily="@font/bondstory"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/NumeroCelular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="292dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:ems="10"
+            fontFamily="@font/brandinksans"
+            android:background="@drawable/bordespago"
+            android:inputType="phone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="324dp"
+            android:text="Direccion"
+            android:fontFamily="@font/bondstory"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/DireccionUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/brandinksans"
+            android:ems="10"
+            android:background="@drawable/bordespago"
+            android:inputType="textPostalAddress"/>
+
+        <Button
+            android:id="@+id/compleRegis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="390dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/brandinksans"
+            android:textColor="@color/md_grey_200"
+            android:text="Registrarse"
+            android:background="@drawable/borde_regisyinicio"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Si ya tienes cuenta, inicia sesion"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/brandinksans"
+        android:layout_marginTop="700dp"/>
+
+    <Button
+        android:id="@+id/irIniciarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="710dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/brandinksans"
+        android:text="Iniciar Sesion"
+        android:textColor="@color/md_red_400"
+        android:background="@drawable/btnnofondo"/>
 
 </RelativeLayout>

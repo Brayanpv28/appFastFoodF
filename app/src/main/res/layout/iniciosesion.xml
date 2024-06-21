@@ -3,6 +3,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_difuminado"
     tools:context=".InicioSesion">
+
+    <RelativeLayout
+        android:id="@+id/viewregistro"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/viewregistro">
+
+        <TextView
+            android:id="@+id/InfoInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Inicio de sesión"
+            android:fontFamily="@font/bondstory"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="36dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingresa los siguientes datos para iniciar sesión"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="60dp"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/brandinksans"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="106dp"
+            android:text="Email o Username"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bondstory"
+            android:textAlignment="textStart"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/CorreoCelularUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="132dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/brandinksans"
+            android:background="@drawable/bordespago"
+            android:ems="10"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="164dp"
+            android:text="Ingresa una contraseña"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bondstory"
+            android:textAlignment="textStart"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/PasswordUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/brandinksans"
+            android:background="@drawable/bordespago"
+            android:ems="10"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/IniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/brandinksans"
+            android:textColor="@color/md_grey_200"
+            android:text="Iniciar Sesion"
+            android:background="@drawable/borde_regisyinicio"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Si aun no tienes tu cuenta, registrate"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/brandinksans"
+        android:layout_marginTop="680dp"/>
+
+    <Button
+        android:id="@+id/irRegis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="690dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/brandinksans"
+        android:text="Registrarme"
+        android:textColor="@color/md_red_400"
+        android:background="@drawable/btnnofondo"/>
 
 </RelativeLayout>

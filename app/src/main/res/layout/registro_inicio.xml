@@ -21,6 +21,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="Registro App"
         android:fontFamily="@font/bondstory"
         android:textAlignment="center"
@@ -31,6 +33,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="333dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:fontFamily="@font/brandinksans"
         android:text="Bienvenidos a NUESTRO RESTAURANTE, por favor registrate para continuar con la compra de tus productos"
         android:textAlignment="center"
@@ -38,11 +42,13 @@
         android:textSize="18dp"/>
 
     <Button
-        android:id="@+id/continuar"
+        android:id="@+id/btnInicioS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="530dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:textColor="@color/md_grey_200"
         android:fontFamily="@font/brandinksans"
         android:layout_marginTop="520dp"
@@ -50,11 +56,13 @@
         android:background="@drawable/borde_regisyinicio"/>
 
     <Button
-        android:id="@+id/terminarsalir"
+        android:id="@+id/btnRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="580dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:fontFamily="@font/brandinksans"
         android:textColor="@color/md_grey_200"
         android:layout_marginTop="570dp"

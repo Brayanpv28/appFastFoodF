@@ -12,7 +12,4 @@
     <solid android:color="@color/white">
     </solid>
 
-    <gradient
-        />
-
 </shape>
