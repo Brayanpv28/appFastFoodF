@@ -6,6 +6,6 @@ import androidx.activity.ComponentActivity
 class Registro : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.registroui)
+        setContentView(R.layout.registro_inicio)
     }
 }

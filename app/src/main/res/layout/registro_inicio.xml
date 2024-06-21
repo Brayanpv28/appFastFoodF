@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_difuminado"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="17dp">
+    </View>
+
+    <TextView
+        android:id="@+id/registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="Registro App"
+        android:fontFamily="@font/bondstory"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="38dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="333dp"
+        android:fontFamily="@font/brandinksans"
+        android:text="Bienvenidos a NUESTRO RESTAURANTE, por favor registrate para continuar con la compra de tus productos"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+
+    <Button
+        android:id="@+id/continuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="530dp"
+        android:textColor="@color/md_grey_200"
+        android:fontFamily="@font/brandinksans"
+        android:layout_marginTop="520dp"
+        android:text="Iniciar sesión"
+        android:background="@drawable/borde_regisyinicio"/>
+
+    <Button
+        android:id="@+id/terminarsalir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="580dp"
+        android:fontFamily="@font/brandinksans"
+        android:textColor="@color/md_grey_200"
+        android:layout_marginTop="570dp"
+        android:text="Registrarse"
+        android:background="@drawable/borde_regisyinicio"/>
+
+</RelativeLayout>
