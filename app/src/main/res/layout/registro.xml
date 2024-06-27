@@ -6,10 +6,11 @@
     android:background="@drawable/fondo_difuminado"
     tools:context=".Registro">
 
+
     <RelativeLayout
         android:id="@+id/viewregistro"
         android:layout_width="match_parent"
-        android:layout_height="460dp"
+        android:layout_height="500dp"
         android:layout_marginStart="30dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -33,7 +34,7 @@
             android:text="Ingresa los siguientes datos para completar tu registro"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="63dp"
             android:textAlignment="center"
             android:textSize="16dp"
             android:textColor="@color/black"
@@ -42,7 +43,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="123dp"
             android:text="Ingresa tu nombre"
             android:textColor="@color/black"
             android:fontFamily="@font/bondstory"
@@ -55,18 +56,19 @@
             android:id="@+id/txtNombreRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="118dp"
+            android:layout_marginTop="148dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/brandinksans"
             android:background="@drawable/bordespago"
             android:ems="10"
+            android:textSize="16dp"
             android:inputType="text"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="183dp"
             android:text="Ingresa tu correo electronico"
             android:textColor="@color/black"
             android:fontFamily="@font/bondstory"
@@ -79,42 +81,44 @@
             android:id="@+id/CorreoUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="176dp"
+            android:layout_marginTop="208dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/brandinksans"
             android:background="@drawable/bordespago"
             android:ems="10"
+            android:textSize="16dp"
             android:inputType="textEmailAddress" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="208dp"
-            android:text="Ingresa una contraseña"
-            android:textColor="@color/black"
-            android:fontFamily="@font/bondstory"
-            android:textAlignment="textStart"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="243dp"
             android:layout_marginEnd="10dp"
+            android:fontFamily="@font/bondstory"
+            android:text="Ingresa una contraseña"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
             android:textSize="20dp"/>
 
         <EditText
             android:id="@+id/ContraseñaUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="234dp"
+            android:layout_marginTop="270dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/brandinksans"
             android:background="@drawable/bordespago"
             android:ems="10"
+            android:textSize="16dp"
             android:inputType="textPassword"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="266dp"
+            android:layout_marginTop="305dp"
             android:text="Ingresa tu numero de celular"
             android:fontFamily="@font/bondstory"
             android:textColor="@color/black"
@@ -127,11 +131,12 @@
             android:id="@+id/NumeroCelular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="292dp"
+            android:layout_marginTop="330dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:ems="10"
-            fontFamily="@font/brandinksans"
+            android:textSize="16dp"
+            android:fontFamily="@font/brandinksans"
             android:background="@drawable/bordespago"
             android:inputType="phone" />
 
@@ -140,7 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="324dp"
+            android:layout_marginTop="365dp"
             android:text="Direccion"
             android:fontFamily="@font/bondstory"
             android:textAlignment="textStart"
@@ -151,11 +156,12 @@
             android:id="@+id/DireccionUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="390dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/brandinksans"
             android:ems="10"
+            android:textSize="16dp"
             android:background="@drawable/bordespago"
             android:inputType="textPostalAddress"/>
 
@@ -163,7 +169,7 @@
             android:id="@+id/compleRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="430dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/brandinksans"
