@@ -34,6 +34,9 @@
             android:name=".BebidaInterfaz"
             android:exported="true"/>
         <activity
+            android:name=".PerfilU"
+            android:exported="true"/>
+        <activity
             android:name=".SeleccionComida"
             android:exported="true"/>
         <activity
