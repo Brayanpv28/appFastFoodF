@@ -23,7 +23,6 @@ class Registro : ComponentActivity() {
         }
 
         val auth = FirebaseAuth.getInstance()
-        val db = FirebaseFirestore.getInstance()
 
         val registerButton = findViewById<Button>(R.id.compleRegis)
         registerButton.setOnClickListener {
@@ -56,7 +55,7 @@ class Registro : ComponentActivity() {
             db.collection("Users").document(it)
                 .set(userDetails)
                 .addOnSuccessListener {
-                    Toast.makeText(this, "Si registro a sido exitoso", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Su registro ha sido exitoso", Toast.LENGTH_LONG).show()
                 }
             Toast.makeText(this, "Error al guardar el registro", Toast.LENGTH_LONG).show()
         }
