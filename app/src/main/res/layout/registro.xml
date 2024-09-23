@@ -152,7 +152,7 @@
             android:textColor="@color/black"
             android:textSize="20dp" />
 
-        <EditText
+            <EditText
             android:id="@+id/DireccionUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
