@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/viewregistro"
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="305dp"
         android:layout_marginStart="30dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -39,68 +39,95 @@
             android:textColor="@color/black"
             android:fontFamily="@font/brandinksans"/>
 
-        <TextView
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bondstory"
+                android:textAlignment="textStart"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="1dp"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="133.5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <EditText
+                android:id="@+id/CorreoInicioUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/brandinksans"
+                android:background="@drawable/bordespago"
+                android:ems="10"
+                android:inputType="text"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Ingresa una contraseña"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bondstory"
+                android:textAlignment="textStart"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="119dp"
-            android:text="Email"
-            android:textColor="@color/black"
-            android:fontFamily="@font/bondstory"
-            android:textAlignment="textStart"
+            android:layout_marginTop="200dp"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:textSize="20dp"/>
+            android:layout_marginEnd="10dp">
 
-        <EditText
-            android:id="@+id/CorreoInicioUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="145dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/brandinksans"
-            android:background="@drawable/bordespago"
-            android:ems="10"
-            android:inputType="text"/>
+            <EditText
+                android:id="@+id/PasswordUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bordespago"
+                android:ems="10"
+                android:fontFamily="@font/brandinksans"
+                android:inputType="textPassword" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
-            android:text="Ingresa una contraseña"
-            android:textColor="@color/black"
-            android:fontFamily="@font/bondstory"
-            android:textAlignment="textStart"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:textSize="20dp"/>
-
-        <EditText
-            android:id="@+id/PasswordUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="210dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/brandinksans"
-            android:background="@drawable/bordespago"
-            android:ems="10"
-            android:inputType="textPassword"/>
-
-        <ImageButton
-            android:id="@+id/verPasswordIS"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:layout_marginStart="345dp"
-            android:layout_marginTop="211dp"
-            android:layout_marginEnd="13dp"
-            android:background="@drawable/oculto" />
+        </RelativeLayout>
 
         <Button
             android:id="@+id/IniciarSesion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="240dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/brandinksans"

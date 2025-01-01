@@ -14,12 +14,6 @@
         android:layout_marginBottom="17dp">
     </View>
 
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"/>
-
     <TextView
         android:id="@+id/localNane"
         android:layout_width="match_parent"
@@ -31,6 +25,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="38dp" />
+
+    <ImageButton
+        android:id="@+id/selecOpciones"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/perfiles"/>
 
     <ImageView
         android:id="@+id/logoLocal"

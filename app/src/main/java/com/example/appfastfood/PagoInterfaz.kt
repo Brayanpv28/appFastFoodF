@@ -54,6 +54,13 @@ class PagoInterfaz : ComponentActivity() {
                     numTarjeta.visibility = View.VISIBLE
                     txtCVC.visibility = View.VISIBLE
                     fechaVenT.visibility = View.VISIBLE
+                } else if (formaPagoSeleccionada == "PSE") {
+                    titleDevuPago.visibility = View.GONE
+                    txtValorD.visibility = View.GONE
+                    titleNumT.visibility = View.GONE
+                    numTarjeta.visibility = View.GONE
+                    txtCVC.visibility = View.GONE
+                    fechaVenT.visibility = View.GONE
                 } else if (formaPagoSeleccionada == "Seleccione una forma de pago") {
                     Toast.makeText(
                         applicationContext,

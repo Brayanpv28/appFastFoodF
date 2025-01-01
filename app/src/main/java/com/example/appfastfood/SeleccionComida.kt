@@ -13,6 +13,12 @@ class SeleccionComida : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.select_fastfood)
 
+        val buttonOpciones: ImageButton = findViewById(R.id.selecOpciones)
+        buttonOpciones.setOnClickListener{
+            val intent: Intent = Intent(this, PerfilU::class.java)
+            startActivity(intent)
+        }
+
         txtCarrito = findViewById(R.id.txtCarrito)
 
         val buttonBurger: ImageButton = findViewById(R.id.burgerButton)
@@ -43,6 +49,5 @@ class SeleccionComida : ComponentActivity() {
             val intent: Intent = Intent(this, carritoInterfaz::class.java)
             startActivity(intent)
         }
-
     }
 }
