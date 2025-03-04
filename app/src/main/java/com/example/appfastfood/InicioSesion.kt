@@ -2,6 +2,8 @@ package com.example.appfastfood
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -18,41 +20,46 @@ class InicioSesion : ComponentActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        val buttonRegis: Button = findViewById(R.id.irRegis)
-        buttonRegis.setOnClickListener {
-            val intent = Intent(this, Registro::class.java)
-            startActivity(intent)
-        }
-
         val emailUser = findViewById<EditText>(R.id.CorreoInicioUser)
         val passwordUser = findViewById<EditText>(R.id.PasswordUser)
         val login = findViewById<Button>(R.id.IniciarSesion)
 
         login.setOnClickListener {
-            val email = emailUser.text.toString()
-            val password = passwordUser.text.toString()
+            val email = emailUser.text.toString().trim()
+            val password = passwordUser.text.toString().trim()
+            val handler = Handler(Looper.getMainLooper())
 
-            if (email.isNotEmpty() && password.isNotEmpty()) {
-                signIn(email, password)
-            } else {
-                Toast.makeText(
-                    this,
-                    "Por favor, complete los campos con su informacion",
-                    Toast.LENGTH_SHORT
-                ).show()
+            if (email.isEmpty()) {
+                emailUser.error = "Ingrese su correo electrónico"
+                emailUser.requestFocus()
+                handler.postDelayed({ emailUser.error = null }, 3000)
+                return@setOnClickListener
             }
+            if (password.isEmpty()) {
+                passwordUser.error = "Ingrese su contraseña"
+                passwordUser.requestFocus()
+                handler.postDelayed({ passwordUser  .error = null }, 3000)
+                return@setOnClickListener
+            }
+            /*if (password.length < 10) {
+                passwordUser.error = "La contraseña debe tener al menos 10 caracteres"
+                handler.postDelayed({ emailUser.error = null }, 3000)
+                return@setOnClickListener
+            }*/
+
+            signIn(email, password)
         }
     }
+
     private fun signIn(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
+            .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "Inicio de sesion exitoso", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, SeleccionComida::class.java)
-                    startActivity(intent)
+                    Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, SeleccionComida::class.java))
                     finish()
-                } else{
-                    Toast.makeText(this, "Error al iniciar sesion: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Completa los datos con la informaciion correcta", Toast.LENGTH_LONG).show()
                 }
             }
     }
