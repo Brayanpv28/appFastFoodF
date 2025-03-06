@@ -9,6 +9,8 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -88,14 +90,10 @@ class PagoInterfaz : ComponentActivity() {
         }
 
         val fechayHoraEditText: EditText = findViewById(R.id.FechayHora)
-
         val currentDateTime = Date()
-
         val formatter = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
         val formatted = formatter.format(currentDateTime)
-
         fechayHoraEditText.setText(formatted)
-
         fechayHoraEditText.isFocusable = false
         fechayHoraEditText.isClickable = false
 
@@ -105,5 +103,25 @@ class PagoInterfaz : ComponentActivity() {
             startActivity(intent)
             finish()
         }
+
+        val db = FirebaseFirestore.getInstance()
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+        if (userId != null) {
+            db.collection("Users").document(userId).get()
+                .addOnSuccessListener { document ->
+                    if (document.exists()) {
+                        val nameU = document.getString("name")
+                        val celular = document.getString("phoneNumber")
+
+                        findViewById<EditText>(R.id.txtNombre).setText(nameU)
+                        findViewById<EditText>(R.id.txtPhone).setText(celular)
+                    }
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Error al obtener datos: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+        }
+
     }
 }

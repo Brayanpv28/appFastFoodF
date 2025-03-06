@@ -11,6 +11,9 @@
         android:right="5sp">
     </padding>
 
+    <corners android:radius="10dp">
+    </corners>
+
     <solid android:color="@color/white">
     </solid>
 </shape>

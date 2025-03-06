@@ -6,11 +6,10 @@
     android:background="@drawable/fondo_difuminado"
     tools:context=".Registro">
 
-
     <RelativeLayout
         android:id="@+id/viewregistro"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="450dp"
         android:layout_marginStart="30dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -149,36 +148,11 @@
             android:background="@drawable/bordespago"
             android:inputType="phone" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="365dp"
-            android:text="Direccion"
-            android:fontFamily="@font/bondstory"
-            android:textAlignment="textStart"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-            <EditText
-            android:id="@+id/DireccionUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="390dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/brandinksans"
-            android:ems="10"
-            android:textSize="16dp"
-            android:background="@drawable/bordespago"
-            android:inputType="textPostalAddress"/>
-
         <Button
             android:id="@+id/compleRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="370dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/brandinksans"

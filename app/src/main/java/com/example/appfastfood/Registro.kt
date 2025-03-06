@@ -11,6 +11,7 @@ import androidx.activity.ComponentActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
+
 class Registro : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,28 +27,56 @@ class Registro : ComponentActivity() {
         val auth = FirebaseAuth.getInstance()
 
         val registerButton = findViewById<Button>(R.id.compleRegis)
-        registerButton.setOnClickListener {
-            val name = findViewById<EditText>(R.id.txtNombreRegistro).text.toString()
-            val email = findViewById<EditText>(R.id.CorreoUser).text.toString()
-            val password = findViewById<EditText>(R.id.ContraseñaUser).text.toString()
-            val phoneNumber = findViewById<EditText>(R.id.NumeroCelular).text.toString()
-            val address = findViewById<EditText>(R.id.DireccionUser).text.toString()
+        val nameUser = findViewById<EditText>(R.id.txtNombreRegistro)
+        val emailU = findViewById<EditText>(R.id.CorreoUser)
+        val passwordU = findViewById<EditText>(R.id.ContraseñaUser)
+        val phoneNumberU = findViewById<EditText>(R.id.NumeroCelular)
+        /*val addressU = findViewById<EditText>(R.id.DireccionUser)*/
 
-            if (name.isEmpty() || email.isEmpty() || password.isEmpty() || phoneNumber.isEmpty() || address.isEmpty()) {
-                Toast.makeText(this, "Por favor, completa todos los campos.", Toast.LENGTH_LONG).show()
+        registerButton.setOnClickListener {
+            val name = nameUser.text.toString().trim()
+            val email = emailU.text.toString().trim()
+            val password = passwordU.text.toString().trim()
+            val celular = phoneNumberU.text.toString().trim()
+            /*val direccion = addressU.text.toString().trim()*/
+            val handler = Handler(Looper.getMainLooper())
+
+            if(name.isEmpty()){
+                nameUser.error = "Ingrese su nombre y apellido"
+                nameUser.requestFocus()
+                handler.postDelayed({nameUser.error = null }, 3000)
+                return@setOnClickListener
+            }
+            if(email.isEmpty()){
+                emailU.error = "Ingresa un correo electronico"
+                emailU.requestFocus()
+                handler.postDelayed({emailU.error = null }, 3000)
+                return@setOnClickListener
+            }
+            if(password.isEmpty()){
+                passwordU.error = "Ingrese una contraseña"
+                passwordU.requestFocus()
+                handler.postDelayed({passwordU.error = null }, 3000)
+                return@setOnClickListener
+            }
+            if(celular.isEmpty()){
+                phoneNumberU.error = "Ingrese su numero de celular"
+                phoneNumberU.requestFocus()
+                handler.postDelayed({phoneNumberU.error = null }, 3000)
+                return@setOnClickListener
             } else if (!isValidEmail(email)) {
-                Toast.makeText(this, "Por favor, ingrese un correo válido con '@correo.com'.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Por favor, ingrese un correo válido.", Toast.LENGTH_LONG).show()
             } else {
                 validatePasswordSequentially(password) { isValid ->
                     if (isValid) {
-                        if (!isValidPhoneNumber(phoneNumber)) {
+                        if (!isValidPhoneNumber(celular)) {
                             Toast.makeText(this, "El número de celular debe tener 10 dígitos y empezar con 3.", Toast.LENGTH_LONG).show()
                         } else {
                             auth.createUserWithEmailAndPassword(email, password)
                                 .addOnCompleteListener { task ->
                                     if (task.isSuccessful) {
                                         val userId = auth.currentUser?.uid
-                                        saveUserDetails(userId, name, email, phoneNumber, address)
+                                        saveUserDetails(userId, name, email, celular)
                                     } else {
                                         Toast.makeText(this, "Ocurrió un error durante el registro.", Toast.LENGTH_LONG).show()
                                     }
@@ -59,13 +88,12 @@ class Registro : ComponentActivity() {
         }
     }
 
-    private fun saveUserDetails(userId: String?, name: String, email: String, phoneNumber: String, address: String) {
+    private fun saveUserDetails(userId: String?, name: String, email: String, phoneNumber: String) {
         val db = FirebaseFirestore.getInstance()
         val userDetails = hashMapOf(
             "name" to name,
             "email" to email,
             "phoneNumber" to phoneNumber,
-            "address" to address
         )
         userId?.let {
             db.collection("Users").document(it)
@@ -98,8 +126,8 @@ class Registro : ComponentActivity() {
         val handler = Handler(Looper.getMainLooper())
 
         // Verificar longitud mínima
-        if (password.length < 8) {
-            Toast.makeText(this, "La contraseña debe tener al menos 8 caracteres.", Toast.LENGTH_SHORT).show()
+        if (password.length < 12) {
+            Toast.makeText(this, "La contraseña debe tener al menos 12 caracteres.", Toast.LENGTH_SHORT).show()
             return onComplete(false)
         }
 

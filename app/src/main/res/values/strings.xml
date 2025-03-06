@@ -9,8 +9,8 @@
     <string-array name="pago">
         <item>Selecciona una forma de pago</item>
         <item>Efectivo</item>
-        <item>Transferencia</item>
         <item>Tarjeta</item>
+        <item>PSE</item>
     </string-array>
     <string name="SelecFormaPago">Selecciona una forma de pago</string>
 </resources>
