@@ -13,4 +13,8 @@
         <item>PSE</item>
     </string-array>
     <string name="SelecFormaPago">Selecciona una forma de pago</string>
+
+    <string name="menu_modooscuro">Modo Oscuro</string>
+    <string name="menu_configuración">configuración</string>
+    <string name="menu_cerrarsesion">Cerrar sesion</string>
 </resources>

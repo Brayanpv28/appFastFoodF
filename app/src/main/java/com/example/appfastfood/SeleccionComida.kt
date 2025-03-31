@@ -8,18 +8,14 @@ import androidx.activity.ComponentActivity
 
 class SeleccionComida : ComponentActivity() {
 
+
     private lateinit var txtCarrito: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.select_fastfood)
 
-        val buttonOpciones: ImageButton = findViewById(R.id.selecOpciones)
-        buttonOpciones.setOnClickListener{
-            val intent: Intent = Intent(this, PerfilU::class.java)
-            startActivity(intent)
-        }
-
-        txtCarrito = findViewById(R.id.txtCarrito)
+    txtCarrito = findViewById(R.id.txtCarrito)
 
         val buttonBurger: ImageButton = findViewById(R.id.burgerButton)
         buttonBurger.setOnClickListener {
@@ -32,6 +28,7 @@ class SeleccionComida : ComponentActivity() {
             val intent: Intent = Intent(this, HotdogInterfaz::class.java)
             startActivity(intent)
         }
+
         val buttonSalchipapas: ImageButton = findViewById(R.id.potatosButton)
         buttonSalchipapas.setOnClickListener {
             val intent: Intent = Intent(this, SalchipapaInterfaz::class.java)

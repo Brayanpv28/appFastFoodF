@@ -1,6 +1,8 @@
 package com.example.appfastfood
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -13,12 +15,14 @@ import com.google.firebase.auth.FirebaseAuth
 class InicioSesion : ComponentActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.iniciosesion)
 
         auth = FirebaseAuth.getInstance()
+        sharedPreferences = getSharedPreferences("SesionUsuario", Context.MODE_PRIVATE)
 
         val emailUser = findViewById<EditText>(R.id.CorreoInicioUser)
         val passwordUser = findViewById<EditText>(R.id.PasswordUser)
@@ -56,11 +60,14 @@ class InicioSesion : ComponentActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, SeleccionComida::class.java))
-                    finish()
+                    FoodSelect()
                 } else {
                     Toast.makeText(this, "Completa los datos con la informaciion correcta", Toast.LENGTH_LONG).show()
                 }
             }
+    }
+    private fun FoodSelect() {
+        startActivity(Intent(this, SeleccionComida::class.java))
+        finish()
     }
 }
