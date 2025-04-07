@@ -19,41 +19,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
         android:layout_centerHorizontal="true"
-        android:text="Pago"
+        android:text="@string/pago"
         android:fontFamily="@font/bondstory"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="38dp" />
+        android:textSize="38sp" />
 
     <ImageButton
         android:id="@+id/backPago"
         android:layout_width="41dp"
         android:layout_height="48dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="22dp"
         android:layout_marginStart="12dp"
         android:background="@drawable/buttonback"
-        android:src="@drawable/back" />
+        android:src="@drawable/back"
+        android:contentDescription="@string/regresar"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:text="Introduzca la siguiente informacion"
-
+        android:layout_marginTop="62dp"
+        android:text="@string/informacion"
         android:textColor="@color/black"
         android:textAlignment="center"
-        android:textSize="23dp"/>
+        android:textSize="23sp"/>
 
     <TextView
     android:layout_width="390dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="100dp"
-    android:text="Ingresa tu nombre"
+    android:text="@string/nombre"
     android:textColor="@color/black"
     android:textAlignment="textStart"
     android:layout_marginStart="10dp"
-    android:textSize="18dp"/>
+    android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/txtNombre"
@@ -70,11 +71,11 @@
         android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
-        android:text="Ingresa el numero de celular"
+        android:text="@string/celular"
         android:textColor="@color/black"
         android:textAlignment="textStart"
         android:layout_marginStart="10dp"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/txtPhone"
@@ -91,11 +92,11 @@
         android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="220dp"
-        android:text="Fecha y hora"
+        android:text="@string/fecha_hora"
         android:textColor="@color/black"
         android:textAlignment="textStart"
         android:layout_marginStart="10dp"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/FechayHora"
@@ -115,10 +116,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="280dp"
-        android:text="Direccion"
+        android:text="@string/direccion"
         android:textAlignment="textStart"
         android:textColor="@color/black"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/txtDireccion"
@@ -135,11 +136,11 @@
         android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="340dp"
-        android:text="Vivienda"
+        android:text="@string/vivienda"
         android:textColor="@color/black"
         android:textAlignment="textStart"
         android:layout_marginStart="10dp"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <Spinner
         android:id="@+id/seVivienda"
@@ -156,11 +157,11 @@
         android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
-        android:text="Metodo de pago"
+        android:text="@string/metodo_pago"
         android:textColor="@color/black"
         android:textAlignment="textStart"
         android:layout_marginStart="10dp"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <Spinner
         android:id="@+id/sformaPago"
@@ -176,11 +177,11 @@
         android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="456dp"
-        android:text="Valor a pagar"
+        android:text="@string/valor_pagar"
         android:textColor="@color/black"
         android:textAlignment="textStart"
         android:layout_marginStart="10dp"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/txtValorTotal"
@@ -189,7 +190,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="484dp"
         android:layout_marginEnd="10dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textAlignment="center"
         android:background="@drawable/bordesviewbuttons"/>
 
@@ -198,39 +199,40 @@
         android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="518dp"
-        android:text="Devuelta del pago"
+        android:text="@string/devuelta_pago"
         android:textColor="@color/black"
         android:textAlignment="textStart"
         android:layout_marginStart="10dp"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/txtValorD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="546dp"
+        android:layout_marginTop="542dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:ems="10"
-        android:background="@drawable/bordespago"
+        android:editable="false"
+        android:background="@drawable/bordesviewbuttons"
         android:inputType="numberDecimal"/>
 
     <TextView
         android:id="@+id/titleNumT"
         android:layout_width="390dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="518dp"
-        android:text="Numero de la Tarjeta"
+        android:layout_marginTop="569dp"
+        android:text="@string/numero_tarjeta"
         android:textColor="@color/black"
         android:textAlignment="textStart"
         android:layout_marginStart="10dp"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/numTarjeta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="546dp"
+        android:layout_marginTop="594dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:ems="10"
@@ -242,11 +244,11 @@
         android:id="@+id/txtCVC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="576dp"
+        android:layout_marginTop="628dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="230dp"
         android:ems="10"
-        android:hint="CVC"
+        android:hint="@string/cvc"
         android:background="@drawable/bordespago"
         android:inputType="number"
         android:maxLength="3"/>
@@ -255,11 +257,11 @@
         android:id="@+id/txtVenciTarje"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="576dp"
+        android:layout_marginTop="628dp"
         android:layout_marginStart="180dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/bordespago"
-        android:hint="  (MM/YY)"
+        android:hint="@string/mes_año"
         android:ems="10"
         android:inputType="date" />
 
@@ -268,10 +270,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/pagar"
-        android:layout_marginTop="690dp"
+        android:layout_marginTop="665dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/bordescarrito"
-        android:paddingLeft="18dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="4dp"
         android:scaleType="fitStart"/>
 
     <TextView
@@ -279,10 +283,10 @@
         android:layout_width="155dp"
         android:layout_height="37dp"
         android:layout_below="@id/pagoyButton"
-        android:layout_marginTop="-48dp"
+        android:layout_marginTop="-58dp"
         android:layout_marginStart="145dp"
         android:fontFamily="@font/bondstory"
-        android:text="Realizar Pago"
+        android:text="@string/realizar_pago"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp" />
