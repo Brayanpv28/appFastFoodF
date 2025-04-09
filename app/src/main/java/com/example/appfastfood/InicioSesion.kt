@@ -21,6 +21,12 @@ class InicioSesion : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.iniciosesion)
 
+        val btnReg: Button = findViewById(R.id.irRegis)
+        btnReg.setOnClickListener {
+            val intent = Intent(this, Registro::class.java)
+            startActivity(intent)
+        }
+
         auth = FirebaseAuth.getInstance()
         sharedPreferences = getSharedPreferences("SesionUsuario", Context.MODE_PRIVATE)
 
@@ -45,12 +51,6 @@ class InicioSesion : ComponentActivity() {
                 handler.postDelayed({ passwordUser  .error = null }, 3000)
                 return@setOnClickListener
             }
-            /*if (password.length < 10) {
-                passwordUser.error = "La contraseña debe tener al menos 10 caracteres"
-                handler.postDelayed({ emailUser.error = null }, 3000)
-                return@setOnClickListener
-            }*/
-
             signIn(email, password)
         }
     }
