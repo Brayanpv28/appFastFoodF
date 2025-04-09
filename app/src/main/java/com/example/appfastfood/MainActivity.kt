@@ -14,31 +14,32 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var auth: FirebaseAuth
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        auth = FirebaseAuth.getInstance()
+
+        // Verifica el estado de autenticación antes de cargar el contenido
+        if (auth.currentUser != null) {
+            // Si el usuario está autenticado, redirige a SeleccionComida
+            startActivity(Intent(this, SeleccionComida::class.java))
+            finish()
+            return
+        }
+
+        // Si no está autenticado, establece la vista y permite interactuar
         setContentView(R.layout.registro_inicio)
 
         val btnIS: Button = findViewById(R.id.btnInicioS)
         btnIS.setOnClickListener {
-            val intent: Intent = Intent(this, InicioSesion::class.java)
+            val intent = Intent(this, InicioSesion::class.java)
             startActivity(intent)
         }
 
         val btnReg: Button = findViewById(R.id.btnRegistro)
         btnReg.setOnClickListener {
-            val intent: Intent = Intent(this, Registro::class.java)
+            val intent = Intent(this, Registro::class.java)
             startActivity(intent)
-        }
-
-        auth = FirebaseAuth.getInstance()
-
-        if (auth.currentUser != null) {
-            startActivity(Intent(this, SeleccionComida::class.java))
-            finish()
-        }else{
-            startActivity(Intent(this, InicioSesion::class.java))
-            finish()
         }
     }
 }
